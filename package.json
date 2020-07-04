@@ -1,0 +1,12 @@
+{
+  "name": "keyboardShapes",
+  "version": "1.0.0",
+  "description": "Gets an image and creates a new representation of that image using keyboard characters",
+  "main": "index.js",
+  "author": "Vítor Santos França",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "jimp": "^0.14.0"
+  }
+}
