@@ -3,10 +3,10 @@ const Canvas = require('canvas');
 const fs = require('fs');
 
 const imagePath = 'C:/Users/Dell/Desktop/test.jpg';
-const charSize = 11;
+const charSize = 1;
 const minAscii = 33;
 const maxAscii = 126;
-const imagePercent = 1;
+const imagePercent = 0.2;
 
 function getOriginalImage(url) {
     Jimp.read(url, (err, image) => {
@@ -78,14 +78,6 @@ function fillNewImage(image, context, hashmap) {
     }
 
     fs.writeFile(__dirname + '/txtFile.txt', turnTextImage(result), () => { });
-}
-
-function reverse(s) {
-    if (s.length < 2)
-      return s;
-    var halfIndex = Math.ceil(s.length / 2);
-    return reverse(s.substr(halfIndex)) +
-           reverse(s.substr(0, halfIndex));
 }
 
 function turnTextImage(original) {
